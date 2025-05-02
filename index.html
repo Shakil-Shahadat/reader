@@ -34,6 +34,12 @@
 
 	'use strict';
 
+	function saveMe()
+	{
+		// Store the article to localStorage
+		localStorage.setItem( 'article', document.querySelector( '.article' ).value );
+	}
+
 	for ( let e of document.querySelectorAll( 'textarea' ) )
 	{
 		for ( let s of [ 'keyup', 'keydown', 'change', 'cut', 'paste', 'drop' ] )
