@@ -40,6 +40,12 @@
 		localStorage.setItem( 'article', document.querySelector( '.article' ).value );
 	}
 
+	// Get & set the article
+	if ( localStorage.getItem( 'article' ) !== null )
+	{
+		document.querySelector( '.article' ).value = localStorage.getItem( 'article' );
+	}
+
 	for ( let e of document.querySelectorAll( 'textarea' ) )
 	{
 		for ( let s of [ 'keyup', 'keydown', 'change', 'cut', 'paste', 'drop' ] )
