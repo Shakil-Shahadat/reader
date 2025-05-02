@@ -30,5 +30,24 @@
 
 	</div><!-- .container -->
 
+<script>
+
+	'use strict';
+
+	for ( let e of document.querySelectorAll( 'textarea' ) )
+	{
+		for ( let s of [ 'keyup', 'keydown', 'change', 'cut', 'paste', 'drop' ] )
+		{
+			e.addEventListener( s, resizeTextArea );
+		}
+	}
+
+	function resizeTextArea()
+	{
+		this.style.height = 'auto';
+		this.style.height = this.scrollHeight + 10 + 'px';
+	}
+
+</script>
 </body>
 </html>
